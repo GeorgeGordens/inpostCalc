@@ -1,3 +1,2 @@
 # bottlepy-web-app
-Simple Web Application example on BottlePy framework
-#### This simple example will be useful for beginner programmers.
+Simple Web Application example on BottlePy framework. It will be useful for beginner programmers.
