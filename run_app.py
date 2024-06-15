@@ -10,15 +10,16 @@ from src import config
 # root directory of the app, needs for correct routing of static files (e.g. images)
 dir_name = os.path.dirname(sys.argv[0])
 
+def page(page_name, content):
+    content['current_user'] = 'username'
+    content['app_version'] = config.APP_VERSION
+    return template(page_name, content)
 
 @route('/')
 @route('/index')
 def page_main():
-    content = {
-        'current_user': 'username',
-        'app_version': '0.0.1'
-    }
-    return template('index', content)
+    content = {}
+    return page('index', content)
 
 
 @route('/img/<filename:re:.*\.png>')
@@ -45,5 +46,5 @@ session_opts = {
     'session.auto': True
 }
 
-run(server='paste', app=SessionMiddleware(bottle.app(), session_opts), host=config.HOST, reloader=False,
-    port=config.PORT, debug=False)
+run(server='paste', app=SessionMiddleware(bottle.app(), session_opts), host=config.HOST, reloader=True,
+    port=config.PORT, debug=True)

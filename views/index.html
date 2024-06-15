@@ -1,84 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <!-- meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-            crossorigin="anonymous"></script>
-
-    <script src="/js/scripts-pnlhub.js"></script>
-
-    <title>Web App example by pnlhub</title>
-
-</head>
-<body>
-
-<div class="container py-4">
-    <header class="pb-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <img class="fluid rounded" src="/img/logo.png" alt="pnlhub logo" height="40">
-            <span class="ms-3 fs-4">Hello, {{ current_user }}!</span>
-        </a>
-    </header>
+% rebase('base')
 
     <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold">web application example</h1>
-            <p class="col-md-8 fs-4">
-                This is an example of web app on BottlePy framework. There are also jQuery and Twitter Bootstrap
-                libraries included on this page
-            </p>
-            <button class="btn btn-primary btn-lg" type="button">Example button</button>
+            <h3 class="display-6 fw-bold">Skonfiguruj swoją przesyłkę</h3>
+            <p><i>Pamiętaj, że waga paczki nie może przekraczać <b>25 kg</b></i></p>
+            <h4>Sposób nadania</h4>
+             <div class="form-check">
+                  <input class="form-check-input" type="radio" name="nadanie" id="nadPaczkomat">
+                  <label class="form-check-label" for="nadPaczkomat">
+                    Paczkomat® lub PaczkoPunkt
+                  </label>
+             </div>
+             <div class="form-check">
+                <input class="form-check-input" type="radio" name="nadanie" id="nadKurier">
+                <label class="form-check-label" for="nadKurier">
+                Kurier
+                </label>
+             </div>
+
+            <div class="dropdown-divider"></div>
+
+            <h4>Sposób dostawy</h4>
+             <div class="form-check">
+                <input class="form-check-input" type="radio" name="odbior" id="odbPaczkomat">
+                <label class="form-check-label" for="odbPaczkomat">
+                Paczkomat® lub PaczkoPunkt
+                </label>
+             </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="odbior" id="odbKurier">
+                <label class="form-check-label" for="odbKurier">
+                Kurier
+                </label>
+             </div>
+
+            <div class="dropdown-divider"></div>
+
+            <h4>Rozmiar paczki</h4>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rozmiar" id="rozmXs">
+                <label class="form-check-label" for="rozmXs">
+                Mała (rozmiar XS, max. 4 x 23 x 40 cm, <b>3 kg</b>) <i>Dostępna jest tylko przez aplikację InPost</i>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rozmiar" id="rozmA">
+                <label class="form-check-label" for="rozmA">
+                Mała (rozmiar A, max. 8 x 38 x 64 cm)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rozmiar" id="rozmB">
+                <label class="form-check-label" for="rozmB">
+                Średnia (rozmiar B, max. 19 x 38 x 64 cm)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rozmiar" id="rozmC">
+                <label class="form-check-label" for="rozmC">
+                Duża (rozmiar C, max. 41 x 38 x 64 cm)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rozmiar" id="rozmD">
+                <label class="form-check-label" for="rozmD">
+                Duża (rozmiar D, max. 80 x 50 x 50 cm) <i>Dostępna jest tylko przy przesyłce przez kuriera</i>
+                </label>
+            </div>
+
+            <div class="dropdown-divider"></div>
+
+            <h4>Dodatkowe usługi</h4>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="uslOchrona5">
+                <label class="form-check-label" for="uslOchrona5">Dodatkowa ochrona do 5 tys. zł</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="uslOchrona10">
+                <label class="form-check-label" for="uslOchrona10">Dodatkowa ochrona do 10 tys. zł</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="uslOchrona20">
+                <label class="form-check-label" for="uslOchrona20">Dodatkowa ochrona do 20 tys. zł</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="uslPobranie">
+                <label class="form-check-label" for="uslPobranie">Pobranie do 5 tys. zł</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="uslWeekend">
+                <label class="form-check-label" for="uslWeekend">Paczka w weekend</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="uslPodjazd1">
+                <label class="form-check-label" for="uslPodjazd1">Płatny podjazd kuriera - nadanie jednej przesyłki</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="uslPodjazd2">
+                <label class="form-check-label" for="uslPodjazd2">Płatny podjazd kuriera - nadanie dwóch przesyłki</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="uslPodjazd3">
+                <label class="form-check-label" for="uslPodjazd3">Płatny podjazd kuriera - nadanie trzech przesyłek</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="uslPodjazd4">
+                <label class="form-check-label" for="uslPodjazd4">Płatny podjazd kuriera - nadanie czterech przesyłek</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="uslPodjazd5">
+                <label class="form-check-label" for="uslPodjazd5">Płatny podjazd kuriera - nadanie pięciu lub więcej przesyłek</label>
+            </div>
+            <button class="btn btn-warning btn-lg" type="button">Rozlicz</button>
         </div>
     </div>
 
-    <div class="row align-items-md-stretch">
-        <div class="col-md-6">
-            <div class="h-100 p-5 text-bg-dark rounded-3">
-                <h2>Pass variables to any page</h2>
-                <p>
-                    Just check how content variables (<i>current_user</i> and <i>app_version</i>) are passed to this
-                    page and make your own powerful pages with any kind of data
-                </p>
-                <button class="btn btn-outline-light" type="button">Example button</button>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="h-100 p-5 bg-light border rounded-3">
-                <h2>Find us on github</h2>
-                <p>
-                    If you have questions, you can easily find us on
-                    <a href="https://github.com/pnlhub/" target="_blank">github</a>
-                    <br>
-                    Don't hesitate to contact us :)
-                </p>
-                <button class="btn btn-outline-secondary" type="button">Example button</button>
-            </div>
-        </div>
-    </div>
-
-    <footer class="pt-3 mt-4 text-muted border-top">
-        <div class="row">
-            <div class="col">
-                pnlhub © 2023
-            </div>
-            <div class="col text-end">
-                build version {{ app_version }}
-            </div>
-        </div>
-    </footer>
-
-</div>
-
-</body>
-</html>
+<script src="/js/calculator.js"></script>
+<!--    <div class="row align-items-md-stretch">-->
+<!--        <div class="col-md-6">-->
+<!--            <div class="h-100 p-5 text-bg-dark rounded-3">-->
+<!--                <h2>Pass variables to any page</h2>-->
+<!--                <p>-->
+<!--                    Just check how content variables (<i>current_user</i> and <i>app_version</i>) are passed to this-->
+<!--                    page and make your own powerful pages with any kind of data-->
+<!--                </p>-->
+<!--                <button class="btn btn-outline-light" type="button">Example button</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-6">-->
+<!--            <div class="h-100 p-5 bg-light border rounded-3">-->
+<!--                <h2>Find us on github</h2>-->
+<!--                <p>-->
+<!--                    If you have questions, you can easily find us on-->
+<!--                    <a href="https://github.com/pnlhub/" target="_blank">github</a>-->
+<!--                    <br>-->
+<!--                    Don't hesitate to contact us :)-->
+<!--                </p>-->
+<!--                <button class="btn btn-outline-secondary" type="button">Example button</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
