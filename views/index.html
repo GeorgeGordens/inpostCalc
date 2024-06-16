@@ -1,142 +1,117 @@
 % rebase('base')
 
-    <div class="p-5 mb-4 bg-light rounded-3">
-        <div class="container-fluid py-5">
-            <h3 class="display-6 fw-bold">Skonfiguruj swoją przesyłkę</h3>
-            <p><i>Pamiętaj, że waga paczki nie może przekraczać <b>25 kg</b></i></p>
-            <h4>Sposób nadania</h4>
-             <div class="form-check">
-                  <input class="form-check-input" type="radio" name="nadanie" id="nadPaczkomat">
-                  <label class="form-check-label" for="nadPaczkomat">
-                    Paczkomat® lub PaczkoPunkt
-                  </label>
-             </div>
-             <div class="form-check">
-                <input class="form-check-input" type="radio" name="nadanie" id="nadKurier">
-                <label class="form-check-label" for="nadKurier">
-                Kurier
-                </label>
-             </div>
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h3 class="display-6 fw-bold">Skonfiguruj swoją przesyłkę</h3>
 
-            <div class="dropdown-divider"></div>
-
-            <h4>Sposób dostawy</h4>
-             <div class="form-check">
-                <input class="form-check-input" type="radio" name="odbior" id="odbPaczkomat">
-                <label class="form-check-label" for="odbPaczkomat">
-                Paczkomat® lub PaczkoPunkt
-                </label>
-             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="odbior" id="odbKurier">
-                <label class="form-check-label" for="odbKurier">
-                Kurier
-                </label>
-             </div>
-
-            <div class="dropdown-divider"></div>
-
-            <h4>Rozmiar paczki</h4>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="rozmiar" id="rozmXs">
-                <label class="form-check-label" for="rozmXs">
-                Mała (rozmiar XS, max. 4 x 23 x 40 cm, <b>3 kg</b>) <i>Dostępna jest tylko przez aplikację InPost</i>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="rozmiar" id="rozmA">
-                <label class="form-check-label" for="rozmA">
-                Mała (rozmiar A, max. 8 x 38 x 64 cm)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="rozmiar" id="rozmB">
-                <label class="form-check-label" for="rozmB">
-                Średnia (rozmiar B, max. 19 x 38 x 64 cm)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="rozmiar" id="rozmC">
-                <label class="form-check-label" for="rozmC">
-                Duża (rozmiar C, max. 41 x 38 x 64 cm)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="rozmiar" id="rozmD">
-                <label class="form-check-label" for="rozmD">
-                Duża (rozmiar D, max. 80 x 50 x 50 cm) <i>Dostępna jest tylko przy przesyłce przez kuriera</i>
-                </label>
-            </div>
-
-            <div class="dropdown-divider"></div>
-
-            <h4>Dodatkowe usługi</h4>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="ochrona" id="uslOchrona5">
-                <label class="form-check-label" for="uslOchrona5">Dodatkowa ochrona do 5 tys. zł</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="ochrona" id="uslOchrona10">
-                <label class="form-check-label" for="uslOchrona10">Dodatkowa ochrona do 10 tys. zł</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="ochrona" id="uslOchrona20">
-                <label class="form-check-label" for="uslOchrona20">Dodatkowa ochrona do 20 tys. zł</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="uslPobranie">
-                <label class="form-check-label" for="uslPobranie">Pobranie do 5 tys. zł</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="uslWeekend">
-                <label class="form-check-label" for="uslWeekend">Paczka w weekend</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd1">
-                <label class="form-check-label" for="uslPodjazd1">Płatny podjazd kuriera - nadanie jednej przesyłki</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd2">
-                <label class="form-check-label" for="uslPodjazd2">Płatny podjazd kuriera - nadanie dwóch przesyłki</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd3">
-                <label class="form-check-label" for="uslPodjazd3">Płatny podjazd kuriera - nadanie trzech przesyłek</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd4">
-                <label class="form-check-label" for="uslPodjazd4">Płatny podjazd kuriera - nadanie czterech przesyłek</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd5">
-                <label class="form-check-label" for="uslPodjazd5">Płatny podjazd kuriera - nadanie pięciu lub więcej przesyłek</label>
-            </div>
+        <h4>Sposób dostawy</h4>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="dostawa" id="dostPaczkomat" value="dostPaczkomat">
+            <label class="form-check-label" for="dostPaczkomat">
+                Paczkomat®/PaczkoPunkt
+            </label>
         </div>
-        <button class="btn btn-warning btn-lg" type="button">Rozlicz</button>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="dostawa" id="dostKurier" value="dostKurier">
+            <label class="form-check-label" for="dostKurier">
+                Kurier
+            </label>
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <h4>Rozmiar paczki</h4>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="rozmiar" id="rozmXs" value="rozmXs">
+            <label class="form-check-label" for="rozmXs">
+                Mała (rozmiar XS, max. 4 x 23 x 40 cm, <b>max. 3 kg</b>) <i>Dostępna jest tylko przez aplikację
+                InPost</i> <b><i id="kosztXs"></i></b>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="rozmiar" id="rozmA" value="rozmA">
+            <label class="form-check-label" for="rozmA">
+                Mała (rozmiar A, max. 8 x 38 x 64 cm, max. 25 kg) <b><i id="kosztA"></i></b>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="rozmiar" id="rozmB" value="rozmB">
+            <label class="form-check-label" for="rozmB">
+                Średnia (rozmiar B, max. 19 x 38 x 64 cm, max. 25 kg) <b><i id="kosztB"></i></b>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="rozmiar" id="rozmC" value="rozmC">
+            <label class="form-check-label" for="rozmC">
+                Duża (rozmiar C, max. 41 x 38 x 64 cm, max. 25 kg) <b><i id="kosztC"></i></b>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="rozmiar" id="rozmD" value="rozmD">
+            <label class="form-check-label" for="rozmD">
+                Duża (rozmiar D, max. 80 x 50 x 50 cm, max. 25 kg) <i>Dostępna jest tylko przy dostawie przez
+                kuriera</i> <b><i id="kosztD"></i></b>
+            </label>
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <h4>Dodatkowe usługi</h4>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ochrona" id="uslOchrona5" value="0" checked>
+            <label class="form-check-label" for="uslOchrona5">Dodatkowa ochrona do 5 tys. zł <i>+ 0,00
+                zł</i></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ochrona" id="uslOchrona10" value="2.57">
+            <label class="form-check-label" for="uslOchrona10">Dodatkowa ochrona do 10 tys. zł <i>+ 2,57
+                zł</i></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ochrona" id="uslOchrona20" value="3">
+            <label class="form-check-label" for="uslOchrona20">Dodatkowa ochrona do 20 tys. zł <i>+ 3,00
+                zł</i></label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="uslPobranie" value="3.68">
+            <label class="form-check-label" for="uslPobranie">Pobranie do 5 tys. zł <i>+ 3,68 zł</i></label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="uslWeekend" value="4.99">
+            <label class="form-check-label" for="uslWeekend">Paczka w weekend <i>+ 4,99 zł</i></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd0" value="0" checked>
+            <label class="form-check-label" for="uslPodjazd1">Nadaję sam w Paczkomacie®/PaczkoPunkcie <i>+
+                0,00 zł</i></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd1" value="7.80">
+            <label class="form-check-label" for="uslPodjazd1">Płatny podjazd kuriera - nadanie jednej przesyłki <i>+
+                7,80 zł</i></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd2" value="7.02">
+            <label class="form-check-label" for="uslPodjazd2">Płatny podjazd kuriera - nadanie dwóch przesyłek <i>+
+                7,02 zł</i></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd3" value="6.24">
+            <label class="form-check-label" for="uslPodjazd3">Płatny podjazd kuriera - nadanie trzech przesyłek <i>+
+                6,24 zł</i></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd4" value="5.46">
+            <label class="form-check-label" for="uslPodjazd4">Płatny podjazd kuriera - nadanie czterech
+                przesyłek <i>+ 5,46 zł</i></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="podjazd" id="uslPodjazd5" value="0">
+            <label class="form-check-label" for="uslPodjazd5">Płatny podjazd kuriera - nadanie pięciu lub więcej
+                przesyłek <i>+ 0,00 zł</i></label>
+        </div>
     </div>
+    <div id="calcResult"></div>
+</div>
 
 <script src="/js/calculator.js"></script>
-<!--    <div class="row align-items-md-stretch">-->
-<!--        <div class="col-md-6">-->
-<!--            <div class="h-100 p-5 text-bg-dark rounded-3">-->
-<!--                <h2>Pass variables to any page</h2>-->
-<!--                <p>-->
-<!--                    Just check how content variables (<i>current_user</i> and <i>app_version</i>) are passed to this-->
-<!--                    page and make your own powerful pages with any kind of data-->
-<!--                </p>-->
-<!--                <button class="btn btn-outline-light" type="button">Example button</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-md-6">-->
-<!--            <div class="h-100 p-5 bg-light border rounded-3">-->
-<!--                <h2>Find us on github</h2>-->
-<!--                <p>-->
-<!--                    If you have questions, you can easily find us on-->
-<!--                    <a href="https://github.com/pnlhub/" target="_blank">github</a>-->
-<!--                    <br>-->
-<!--                    Don't hesitate to contact us :)-->
-<!--                </p>-->
-<!--                <button class="btn btn-outline-secondary" type="button">Example button</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
